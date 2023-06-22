@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-n6ue
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-n6ue
+    app.kubernetes.io/part-of: load-app-406fe753-9e14-41ea-8b70-e2542f9352b2
+  name: devfile-sample-n6ue
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: devfile-sample-n6ue
+    weight: null
+status: {}
